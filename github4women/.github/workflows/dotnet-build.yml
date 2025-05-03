@@ -1,4 +1,5 @@
-//criar uma action para ser executada de hora em hora
+name: Executar Workflow de Build
+
 on:
   push:
   schedule:
