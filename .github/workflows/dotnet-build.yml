@@ -11,6 +11,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+        
       - name: log
         run: echo "Executando workflow de build"
 
@@ -20,7 +21,7 @@ jobs:
           dotnet-version: '6.0.x'
 
       - name: Restore dependencies
-        run: dotnet restore
+        run: dotnet restore github4womem/github4womem.csproj
 
       - name: Build project
-        run: dotnet build **/*.csproj --no-restore
+        run: dotnet build github4womem/github4womem.csproj --configuration Release --no-restore
